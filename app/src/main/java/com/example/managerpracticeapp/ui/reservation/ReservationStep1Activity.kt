@@ -1,15 +1,27 @@
 package com.example.managerpracticeapp.ui.reservation
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.managerpracticeapp.R
+import com.example.managerpracticeapp.databinding.ActivityReservationStep1Binding
 
 class ReservationStep1Activity : AppCompatActivity() {
+    private lateinit var binding: ActivityReservationStep1Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_reservation_step1)
+        binding = ActivityReservationStep1Binding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        navigateToMain()
     }
+
+    private fun navigateToMain() {
+        binding.backBtn.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
+        binding.previousBtn.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+    }
+
 }
