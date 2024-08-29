@@ -1,4 +1,4 @@
-package com.example.managerpracticeapp.ui
+package com.example.managerpracticeapp.ui.login
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
