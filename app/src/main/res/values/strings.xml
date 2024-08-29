@@ -8,4 +8,6 @@
     <string name="see_all">모두 보기</string>
     <string name="service_available_after_log_in">로그인 후 이용 가능한 서비스입니다.</string>
     <string name="reservation_status">예약 현황</string>
+    <string name="service_description">전문 매니저와 함께해서\n믿을 수 있는 병원 동행 서비스</string>
+    <string name="application_name">앱이름</string>
 </resources>
