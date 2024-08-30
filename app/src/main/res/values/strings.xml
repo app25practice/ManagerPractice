@@ -18,4 +18,13 @@
     <string name="woman">여</string>
     <string name="previous">이전</string>
     <string name="next">다음</string>
+    <string name="select_relation">산지니님과의 관계를 선택해주세요</string>
+    <string name="myself">본인</string>
+    <string-array name="relation_option">
+        <item>본인</item>
+        <item>자식</item>
+        <item>부모</item>
+        <item>친척</item>
+        <item>기타</item>
+    </string-array>
 </resources>
