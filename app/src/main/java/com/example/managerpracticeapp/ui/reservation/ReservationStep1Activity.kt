@@ -1,5 +1,6 @@
 package com.example.managerpracticeapp.ui.reservation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.managerpracticeapp.databinding.ActivityReservationStep1Binding
@@ -12,6 +13,7 @@ class ReservationStep1Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         navigateToMain()
+        navigateToNext()
     }
 
     private fun navigateToMain() {
@@ -21,6 +23,13 @@ class ReservationStep1Activity : AppCompatActivity() {
 
         binding.previousBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
+        }
+    }
+
+    private fun navigateToNext() {
+        binding.nextBtn.setOnClickListener {
+            val intent = Intent(this, ReservationStep2Activity::class.java)
+            startActivity(intent)
         }
     }
 
