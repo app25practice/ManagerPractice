@@ -10,7 +10,7 @@
     <string name="reservation_status">예약 현황</string>
     <string name="service_description">전문 매니저와 함께해서\n믿을 수 있는 병원 동행 서비스</string>
     <string name="application_name">앱이름</string>
-    <string name="input_name_gender">환자분의 성함과 성별을 입력해주세요</string>
+    <string name="input_information">환자분의 정보를 입력해주세요</string>
     <string name="name">이름</string>
     <string name="input_name_hint">이름 입력</string>
     <string name="gender">성별</string>
@@ -18,13 +18,42 @@
     <string name="woman">여</string>
     <string name="previous">이전</string>
     <string name="next">다음</string>
-    <string name="select_relation">산지니님과의 관계를 선택해주세요</string>
+    <string name="select_relation">환자분과의 관계를 선택해주세요</string>
     <string name="myself">본인</string>
+    <string name="phone_num">전화번호</string>
+    <string name="_010">010</string>
+    <string name="_0000">0000</string>
+    <string name="dash">-</string>
+    <string name="input_next_of_kin">보호자의 연락처를 입력해주세요</string>
+    <string name="notify_by_message">(동행 현황을 보호자분께도 문자로 알려드립니다.)</string>
     <string-array name="relation_option">
         <item>본인</item>
         <item>자식</item>
         <item>부모</item>
         <item>친척</item>
         <item>기타</item>
+    </string-array>
+    <string-array name="phone_num_option">
+        <item>010</item>
+        <item>011</item>
+        <item>016</item>
+        <item>017</item>
+        <item>019</item>
+        <item>02</item>
+        <item>031</item>
+        <item>032</item>
+        <item>033</item>
+        <item>041</item>
+        <item>042</item>
+        <item>043</item>
+        <item>044</item>
+        <item>051</item>
+        <item>052</item>
+        <item>053</item>
+        <item>054</item>
+        <item>061</item>
+        <item>062</item>
+        <item>063</item>
+        <item>064</item>
     </string-array>
 </resources>
