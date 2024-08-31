@@ -4,37 +4,33 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.managerpracticeapp.R
-import com.example.managerpracticeapp.databinding.ActivityReservationStep1Binding
+import com.example.managerpracticeapp.databinding.ActivityReservationStep3Binding
 
-class ReservationStep1Activity : AppCompatActivity() {
-    private lateinit var binding: ActivityReservationStep1Binding
+class ReservationStep3Activity : AppCompatActivity() {
+    private lateinit var binding: ActivityReservationStep3Binding
     private var firstPhoneNum = "010"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityReservationStep1Binding.inflate(layoutInflater)
+        binding = ActivityReservationStep3Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        navigateToMain()
-        navigateToNext()
+        navigateToPrevious()
         setPhoneNumDropDown()
     }
 
-    private fun navigateToMain() {
+    private fun navigateToPrevious() {
         binding.backBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
 
         binding.previousBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
-        }
-    }
-
-    private fun navigateToNext() {
-        binding.nextBtn.setOnClickListener {
-            val intent = Intent(this, ReservationStep2Activity::class.java)
-            startActivity(intent)
         }
     }
 

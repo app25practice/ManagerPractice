@@ -14,11 +14,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        navigateToReservation()
         navigateToLogin()
 
     }
 
     private fun navigateToLogin() {
+        binding.welcomeTextView.setOnClickListener {
+            val intent = Intent(this, LoginEntryActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun navigateToReservation() {
         binding.goReservationBtn.setOnClickListener {
             val intent = Intent(this, ReservationStep1Activity::class.java)
             startActivity(intent)
