@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ManagerPracticeApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.reservation.ReservationStep5Activity"
+            android:exported="false" />
+        <activity
             android:name=".ui.reservation.ReservationStep4Activity"
             android:exported="false" />
         <activity

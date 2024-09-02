@@ -32,6 +32,11 @@
     <string name="yyyy">YYYY</string>
     <string name="_01">01</string>
     <string name="_1970">1970</string>
+    <string name="input_departures">출발지를 입력해주세요</string>
+    <string name="road_address">도로명 주소</string>
+    <string name="search_by_road_address">도로명 주소(지번 주소)로 검색</string>
+    <string name="detail_address">상세주소</string>
+    <string name="input_detail_address">상세한 주소를 작성해주세요</string>
     <string-array name="relation_option">
         <item>본인</item>
         <item>자식</item>
