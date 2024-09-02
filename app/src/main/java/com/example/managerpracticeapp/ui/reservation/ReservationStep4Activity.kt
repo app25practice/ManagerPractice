@@ -1,5 +1,6 @@
 package com.example.managerpracticeapp.ui.reservation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
@@ -17,6 +18,7 @@ class ReservationStep4Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         navigateToPrevious()
+        navigateToNext()
         setBirthdayTextChangedListener()
     }
 
@@ -65,6 +67,13 @@ class ReservationStep4Activity : AppCompatActivity() {
 
         binding.previousBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
+        }
+    }
+
+    private fun navigateToNext() {
+        binding.nextBtn.setOnClickListener {
+            val intent = Intent(this, ReservationStep5Activity::class.java)
+            startActivity(intent)
         }
     }
 }
