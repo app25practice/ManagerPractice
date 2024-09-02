@@ -32,6 +32,8 @@
     <string name="yyyy">YYYY</string>
     <string name="_01">01</string>
     <string name="_1970">1970</string>
+    <string name="all">전체</string>
+    <string name="manager">매니저</string>
     <string-array name="relation_option">
         <item>본인</item>
         <item>자식</item>
