@@ -62,4 +62,6 @@
         <item>063</item>
         <item>064</item>
     </string-array>
+
+    <string name="call_manager">"매니저에게 연락하기"</string>
 </resources>
