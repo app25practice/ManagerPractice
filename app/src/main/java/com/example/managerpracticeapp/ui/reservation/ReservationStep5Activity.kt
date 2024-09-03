@@ -1,5 +1,6 @@
 package com.example.managerpracticeapp.ui.reservation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,7 @@ class ReservationStep5Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         navigateToPrevious()
+        navigateToNext()
     }
 
     private fun navigateToPrevious() {
@@ -26,6 +28,13 @@ class ReservationStep5Activity : AppCompatActivity() {
 
         binding.previousBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
+        }
+    }
+
+    private fun navigateToNext() {
+        binding.nextBtn.setOnClickListener {
+            val intent = Intent(this, ReservationStep6Activity::class.java)
+            startActivity(intent)
         }
     }
 
