@@ -37,6 +37,9 @@
     <string name="search_by_road_address">도로명 주소(지번 주소)로 검색</string>
     <string name="detail_address">상세주소</string>
     <string name="input_detail_address">상세한 주소를 작성해주세요</string>
+    <string name="choose_destination">도착 병원을 선택해주세요</string>
+    <string name="search_destination">도착 병원 검색</string>
+    <string name="input_query">검색어 입력(ex. 부산대, 세브란스)</string>
     <string-array name="relation_option">
         <item>본인</item>
         <item>자식</item>

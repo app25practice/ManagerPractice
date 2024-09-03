@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ManagerPracticeApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.reservation.ReservationStep7Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationStep6Activity"
+            android:exported="false" />
+        <activity
             android:name=".ui.reservation.ReservationStep5Activity"
             android:exported="false" />
         <activity
