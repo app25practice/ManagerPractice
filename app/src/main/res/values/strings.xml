@@ -42,7 +42,7 @@
     <string name="input_query">검색어 입력(ex. 부산대, 세브란스)</string>
     <string name="choose_date">이용일자를 선택해주세요</string>
     <string name="choose_time">매니저 만남 시간을 선택해주세요</string>
-    <string name="same_day_reservation">당일 예약은 불가합니다.</string>
+    <string name="same_day_reservation">당일 예약은 불가합니다</string>
     <string-array name="relation_option">
         <item>본인</item>
         <item>자식</item>
