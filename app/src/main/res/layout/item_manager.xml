@@ -38,6 +38,7 @@
         app:layout_constraintStart_toEndOf="@+id/profile_name"
         />
     <TextView
+        android:id="@+id/profile_review_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text = "n건의 후기"
@@ -84,6 +85,7 @@
 
 </LinearLayout>
     <TextView
+        android:id="@+id/profile_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0.0"
