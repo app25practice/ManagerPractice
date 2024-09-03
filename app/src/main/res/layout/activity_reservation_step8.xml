@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <ImageView
         android:id="@+id/back_btn"
         android:layout_width="wrap_content"
@@ -93,11 +94,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/manager_list"
         android:layout_width="wrap_content"
-        android:layout_height="350sp"
-        android:layout_marginTop="40sp"
+        android:layout_height="390dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="@id/select_gender_radio_group"
         app:layout_constraintEnd_toEndOf="@id/select_gender_radio_group"
         app:layout_constraintTop_toBottomOf="@+id/select_gender_radio_group"
+        tools:listitem = "@layout/item_manager"
         >
 
 
