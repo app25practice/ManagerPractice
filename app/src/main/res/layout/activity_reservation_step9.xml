@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e4e7ed"
+    android:background="@color/gray_02"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -62,7 +62,7 @@
     <ImageView
             android:layout_width="50dp"
             android:layout_height="10dp"
-            android:background="#8a93a0"
+            android:background="@color/gray_01"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
