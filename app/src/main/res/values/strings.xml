@@ -34,6 +34,26 @@
     <string name="_1970">1970</string>
     <string name="all">전체</string>
     <string name="manager">매니저</string>
+    <string name="check_reservation">예약 내용을 한번 더 확인해주세요</string>
+    <string name="patient">환자</string>
+    <string name="from">출발지</string>
+    <string name="to">도착지</string>
+    <string name="damdangManger">담당 매니저</string>
+    <string name="pay">결제하기</string>
+    <string name="pay_info">결제정보</string>
+    <string name="deposit">보증금</string>
+    <string name="won">원</string>
+    <string name="total_payment_amount">총 결제금액</string>
+    <string name="pay_credit_card">신용/체크카드 결제하기</string>
+    <string name="pay_toss">토스로 결제하기</string>
+    <string name="manager_list">매니저 리스트</string>
+    <string name="select_manager">담당 매니저를 선택해주세요.</string>
+    <string name="manager_info">매니저 정보</string>
+    <string name="hanmadi">한마디</string>
+    <string name="active_location">활동 지역</string>
+    <string name="active_time">활동 시간</string>
+    <string name="career_infor">경력 사항</string>
+    <string name="reserve">예약 하기</string>
     <string-array name="relation_option">
         <item>본인</item>
         <item>자식</item>
