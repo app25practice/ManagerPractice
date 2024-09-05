@@ -12,7 +12,7 @@ class LiveCompanionRecyclerViewAdapter
         : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: String) {
-            binding.liveCompanionStatusTv.text = item
+            binding.liveCompanionStatusItem.text = item
         }
     }
 
@@ -26,9 +26,9 @@ class LiveCompanionRecyclerViewAdapter
         holder.bind(item)
 
         if (position == itemCount - 1) {
-            holder.binding.liveCompanionStatusTv.setTypeface(null, android.graphics.Typeface.BOLD)
+            holder.binding.liveCompanionStatusItem.setTypeface(null, android.graphics.Typeface.BOLD)
         } else {
-            holder.binding.liveCompanionStatusTv.setTypeface(null, android.graphics.Typeface.NORMAL)
+            holder.binding.liveCompanionStatusItem.setTypeface(null, android.graphics.Typeface.NORMAL)
         }
     }
 
