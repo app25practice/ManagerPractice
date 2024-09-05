@@ -7,6 +7,7 @@ import com.example.managerpracticeapp.databinding.ActivityMainBinding
 import com.example.managerpracticeapp.ui.companion.LiveCompanionActivity
 import com.example.managerpracticeapp.ui.login.LoginEntryActivity
 import com.example.managerpracticeapp.ui.reservation.ReservationStep1Activity
+import com.example.managerpracticeapp.ui.status.ReservationStatusActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         navigateToReservation()
         navigateToLogin()
         navigateToLiveCompanion()
+        navigateToReservationStatus()
 
     }
 
@@ -38,6 +40,13 @@ class MainActivity : AppCompatActivity() {
     private fun navigateToLiveCompanion() {
         binding.realTimeCompanionSeeAllBtn.setOnClickListener {
             val intent = Intent(this, LiveCompanionActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun navigateToReservationStatus() {
+        binding.reservationSeeAllBtn.setOnClickListener {
+            val intent = Intent(this, ReservationStatusActivity::class.java)
             startActivity(intent)
         }
     }
