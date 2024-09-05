@@ -8,5 +8,5 @@ import java.util.Date
 data class ReservationInfo(
     val id: String,
     val name: String,
-    val date: Date
+    val date: Date,
 ) : Parcelable

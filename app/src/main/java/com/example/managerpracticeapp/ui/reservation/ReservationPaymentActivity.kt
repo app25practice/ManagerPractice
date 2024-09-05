@@ -6,11 +6,10 @@ import com.example.managerpracticeapp.databinding.ActivityReservationPaymentBind
 
 class ReservationPaymentActivity : AppCompatActivity() {
     private lateinit var binding: ActivityReservationPaymentBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityReservationPaymentBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
     }
 }

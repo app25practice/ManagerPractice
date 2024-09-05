@@ -1,21 +1,17 @@
 package com.example.managerpracticeapp.ui.status
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.managerpracticeapp.R
 import com.example.managerpracticeapp.databinding.ActivityReservationCancelBinding
-import com.example.managerpracticeapp.databinding.ActivityReservationStatusBinding
 import java.text.SimpleDateFormat
 import java.util.Locale
 
 class ReservationCancelActivity : AppCompatActivity() {
     private lateinit var binding: ActivityReservationCancelBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -27,7 +23,7 @@ class ReservationCancelActivity : AppCompatActivity() {
         navigateToPrevious()
     }
 
-    private fun navigateToPrevious(){
+    private fun navigateToPrevious() {
         binding.backBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }

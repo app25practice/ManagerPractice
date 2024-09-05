@@ -11,6 +11,7 @@ import com.example.managerpracticeapp.databinding.ActivityReservationStep1Bindin
 class ReservationStep1Activity : AppCompatActivity() {
     private lateinit var binding: ActivityReservationStep1Binding
     private var firstPhoneNum = "010"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityReservationStep1Binding.inflate(layoutInflater)
@@ -49,5 +50,4 @@ class ReservationStep1Activity : AppCompatActivity() {
             Toast.makeText(this, "선택된 값: $firstPhoneNum", Toast.LENGTH_SHORT).show()
         }
     }
-
 }

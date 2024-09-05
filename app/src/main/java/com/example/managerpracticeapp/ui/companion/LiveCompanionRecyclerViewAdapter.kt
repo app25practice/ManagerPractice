@@ -5,23 +5,27 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.managerpracticeapp.databinding.ItemLiveCompanionStatusBinding
 
-class LiveCompanionRecyclerViewAdapter
- : ListAdapter<String, LiveCompanionRecyclerViewAdapter.LiveCompanionViewHolder>(DiffCallback()) {
-
-    inner class LiveCompanionViewHolder(val binding: ItemLiveCompanionStatusBinding)
-        : RecyclerView.ViewHolder(binding.root) {
-
+class LiveCompanionRecyclerViewAdapter :
+    ListAdapter<String, LiveCompanionRecyclerViewAdapter.LiveCompanionViewHolder>(DiffCallback()) {
+    inner class LiveCompanionViewHolder(val binding: ItemLiveCompanionStatusBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(item: String) {
             binding.liveCompanionStatusItem.text = item
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LiveCompanionViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ): LiveCompanionViewHolder {
         val binding = ItemLiveCompanionStatusBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return LiveCompanionViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: LiveCompanionViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: LiveCompanionViewHolder,
+        position: Int,
+    ) {
         val item = getItem(position)
         holder.bind(item)
 
@@ -33,11 +37,17 @@ class LiveCompanionRecyclerViewAdapter
     }
 
     class DiffCallback : DiffUtil.ItemCallback<String>() {
-        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
+        override fun areItemsTheSame(
+            oldItem: String,
+            newItem: String,
+        ): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
+        override fun areContentsTheSame(
+            oldItem: String,
+            newItem: String,
+        ): Boolean {
             return oldItem == newItem
         }
     }

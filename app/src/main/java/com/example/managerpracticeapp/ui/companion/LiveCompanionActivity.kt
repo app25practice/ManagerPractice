@@ -34,7 +34,7 @@ class LiveCompanionActivity : AppCompatActivity() {
     private fun startMapView() {
         binding.mapView.start(
             createMapLifeCycleCallback(),
-            createMapReadyCallback()
+            createMapReadyCallback(),
         )
     }
 
@@ -62,18 +62,21 @@ class LiveCompanionActivity : AppCompatActivity() {
     }
 
     private fun addLabelsToMap(labelManager: LabelManager) {
-        val styles = LabelStyles.from(
-            LabelStyle.from(R.drawable.marker).setZoomLevel(8)
-        )
+        val styles =
+            LabelStyles.from(
+                LabelStyle.from(R.drawable.marker).setZoomLevel(8),
+            )
 
-        val labelOptions = LabelOptions.from(
-            LatLng.from( sampleLatitude, sampleLongitude))
-            .setStyles(styles)
+        val labelOptions =
+            LabelOptions.from(
+                LatLng.from(sampleLatitude, sampleLongitude),
+            )
+                .setStyles(styles)
 
         labelManager.layer?.addLabel(labelOptions)
     }
 
-    private fun setLiveCompanionRecyclerViewAdapter(){
+    private fun setLiveCompanionRecyclerViewAdapter() {
         val adapter = LiveCompanionRecyclerViewAdapter()
         binding.liveCompanionRecyclerView.adapter = adapter
         binding.liveCompanionRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -81,17 +84,18 @@ class LiveCompanionActivity : AppCompatActivity() {
         testLiveCompanionRecyclerViewAdapter(adapter)
     }
 
-    private fun testLiveCompanionRecyclerViewAdapter(adapter: LiveCompanionRecyclerViewAdapter){
-        val mock = listOf(
-            "24.08.26 21:00 방문 픽업",
-            "24.08.26 21:04 부산대 병원 도착",
-            "24.08.26 21:04 병원 접수 완료"
-        )
+    private fun testLiveCompanionRecyclerViewAdapter(adapter: LiveCompanionRecyclerViewAdapter) {
+        val mock =
+            listOf(
+                "24.08.26 21:00 방문 픽업",
+                "24.08.26 21:04 부산대 병원 도착",
+                "24.08.26 21:04 병원 접수 완료",
+            )
 
         adapter.submitList(mock)
     }
 
-    private fun navigateToPrevious(){
+    private fun navigateToPrevious() {
         binding.mapPreviousBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }

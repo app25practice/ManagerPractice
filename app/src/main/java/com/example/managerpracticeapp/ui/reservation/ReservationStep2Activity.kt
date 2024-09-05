@@ -51,5 +51,4 @@ class ReservationStep2Activity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 }

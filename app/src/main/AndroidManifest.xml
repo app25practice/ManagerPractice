@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ManagerPracticeApp"
         tools:targetApi="31">
+
         <activity
             android:name=".ui.status.ReservationCheckReportActivity"
             android:exported="false" />
@@ -26,6 +27,18 @@
             android:exported="false" />
         <activity
             android:name=".ui.companion.LiveCompanionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationCheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationStep9Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationStep8Activity"
             android:exported="false" />
         <activity
             android:name=".ui.reservation.ReservationStep7Activity"
@@ -48,6 +61,7 @@
         <activity
             android:name=".ui.reservation.ReservationStep1Activity"
             android:exported="false" />
+
         <activity
             android:name=".ui.login.LoginEntryActivity"
             android:exported="false" />

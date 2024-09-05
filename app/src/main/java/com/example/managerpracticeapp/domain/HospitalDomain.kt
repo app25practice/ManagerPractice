@@ -1,6 +1,6 @@
 package com.example.managerpracticeapp.domain
 
-data class HospitalDomain (
+data class HospitalDomain(
     val name: String,
     val address: String,
 )
