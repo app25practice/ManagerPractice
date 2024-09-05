@@ -1,11 +1,7 @@
 package com.example.managerpracticeapp.ui.status
 
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.managerpracticeapp.R
 import com.example.managerpracticeapp.databinding.ActivityReservationCheckReportBinding
 import org.json.JSONObject
@@ -26,7 +22,7 @@ class ReservationCheckReportActivity : AppCompatActivity() {
         setDoctorComment(mockJsonResponse())
     }
 
-    private fun navigateToPrevious(){
+    private fun navigateToPrevious() {
         binding.backBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
@@ -44,18 +40,18 @@ class ReservationCheckReportActivity : AppCompatActivity() {
 
     private fun mockJsonResponse(): String {
         return """
-        {
-          "status": "200: OK",
-          "message": "리포트 조회가 성공하였습니다.",
-          "data": {
-            "doctor_comment": "환자의 상태는 안정적입니다.",
-            "medication_guidance": "매일 3회 식후 30분 복용"
-          }
-        }
-    """.trimIndent()
+            {
+              "status": "200: OK",
+              "message": "리포트 조회가 성공하였습니다.",
+              "data": {
+                "doctor_comment": "환자의 상태는 안정적입니다.",
+                "medication_guidance": "매일 3회 식후 30분 복용"
+              }
+            }
+            """.trimIndent()
     }
 
-    private fun setDoctorComment(jsonResponse: String){
+    private fun setDoctorComment(jsonResponse: String) {
         val jsonObject = JSONObject(jsonResponse)
         val dataObject = jsonObject.getJSONObject("data")
 
@@ -87,4 +83,5 @@ class ReservationCheckReportActivity : AppCompatActivity() {
                 }
             }
         }
-}}
+    }
+}

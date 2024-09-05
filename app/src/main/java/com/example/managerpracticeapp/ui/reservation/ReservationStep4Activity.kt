@@ -9,7 +9,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeParseException
 
 class ReservationStep4Activity : AppCompatActivity() {
-    private lateinit var binding:ActivityReservationStep4Binding
+    private lateinit var binding: ActivityReservationStep4Binding
     private var date: LocalDate? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

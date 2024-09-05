@@ -7,6 +7,7 @@ import com.example.managerpracticeapp.databinding.ActivityReservationCheckBindin
 
 class ReservationCheckActivity : AppCompatActivity() {
     private lateinit var binding: ActivityReservationCheckBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityReservationCheckBinding.inflate(layoutInflater)
@@ -14,8 +15,8 @@ class ReservationCheckActivity : AppCompatActivity() {
 
         navigateToMain()
         navigateToNext()
-
     }
+
     private fun navigateToMain() {
         binding.backBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
