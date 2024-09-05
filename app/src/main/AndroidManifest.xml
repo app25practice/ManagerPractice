@@ -28,6 +28,15 @@
             android:name=".ui.companion.LiveCompanionActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.reservation.ReservationStep7Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationStep6Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationStep5Activity"
+            android:exported="false" />
+        <activity
             android:name=".ui.reservation.ReservationStep4Activity"
             android:exported="false" />
         <activity
