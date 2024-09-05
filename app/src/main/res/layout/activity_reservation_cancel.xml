@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.status.ReservationCheckReportActivity">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="14dp"
+        android:padding="16dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/res_check_report_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reservation_cancel"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/back_btn"/>
+
+    <TextView
+        android:id="@+id/res_cancel_description_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/reservation_cancle_description"
+        android:textSize="14sp"
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/res_check_report_title_tv"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/res_info"
+        android:layout_width="300dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/light_gray_outline_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/res_cancel_description_tv">
+
+        <TextView
+            android:id="@+id/manager_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            tools:text="매니저 이름"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/manager"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/manager_name_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/manager_name_tv"/>
+
+        <TextView
+            android:id="@+id/res_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            tools:text="7월 14일 오후 8시"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/manager_name_tv"
+            app:layout_constraintStart_toStartOf="@id/manager_name_tv"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/res_cancel_reason_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/cancel_reason"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/res_info"
+        app:layout_constraintStart_toStartOf="@id/res_info"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/res_cancel_reason_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/light_gray_outline_box"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/res_cancel_reason_tv"
+        app:layout_constraintStart_toStartOf="@+id/res_cancel_reason_tv">
+
+        <AutoCompleteTextView
+            android:id="@+id/res_cancel_reason_auto_complete_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:hint="@string/select"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/res_cancel_reason_detail_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/cancel_reason_detail"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/res_cancel_reason_input"
+        app:layout_constraintStart_toStartOf="@id/res_cancel_reason_input"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:hint="구체적인 사유를 적어주세요"
+        android:background="@drawable/light_gray_input_box"
+        app:layout_constraintTop_toBottomOf="@id/res_cancel_reason_detail_tv"
+        app:layout_constraintStart_toStartOf="@id/res_cancel_reason_detail_tv"/>
+
+    <TextView
+        android:id="@+id/call_manager_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="@string/deposit_refund_cancel"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
