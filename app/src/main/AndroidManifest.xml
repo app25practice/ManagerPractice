@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ManagerPracticeApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.reservation.ReservationSelectVehicle"
+            android:exported="false" />
+        <activity
             android:name=".ui.reservation.RerservationStep2SelectServiceActivity"
             android:exported="false" />
         <activity
