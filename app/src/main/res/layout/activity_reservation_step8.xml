@@ -15,25 +15,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id = "@+id/title"
+        android:id = "@+id/choose_manager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_manager"
         android:textSize="18sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginLeft="32sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
         app:layout_constraintTop_toBottomOf="@+id/back_btn"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/listOfManager"
+        android:id="@+id/manager_list_text_vew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/manager_list"
         android:textSize="18sp"
-        android:layout_marginTop="40sp"
-        android:layout_marginLeft="32sp"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/choose_manager"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <RadioGroup
@@ -44,7 +44,7 @@
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listOfManager">
+        app:layout_constraintTop_toBottomOf="@id/manager_list_text_vew">
 
         <RadioButton
             android:id="@+id/select_gender_all_radio_btn"
@@ -92,7 +92,7 @@
     </RadioGroup>
     
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/manager_list"
+        android:id="@+id/manager_recycler_view"
         android:layout_width="wrap_content"
         android:layout_height="390dp"
         android:layout_marginTop="40dp"

@@ -11,14 +11,19 @@ import com.example.managerpracticeapp.ui.reservation.interfaces.OnHospitalClickL
 
 class HospitalRecyclerViewAdapter(private val clickListener: OnHospitalClickListener) :
     ListAdapter<HospitalDomain, HospitalRecyclerViewAdapter.HospitalViewHolder>(HospitalDiffCallback()) {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HospitalViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ): HospitalViewHolder {
         val binding =
             ItemHospitalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return HospitalViewHolder(binding, clickListener)
     }
 
-    override fun onBindViewHolder(holder: HospitalViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: HospitalViewHolder,
+        position: Int,
+    ) {
         val hospital = getItem(position)
         holder.bind(hospital)
     }
@@ -46,18 +51,16 @@ class HospitalRecyclerViewAdapter(private val clickListener: OnHospitalClickList
     private class HospitalDiffCallback : DiffUtil.ItemCallback<HospitalDomain>() {
         override fun areItemsTheSame(
             oldItem: HospitalDomain,
-            newItem: HospitalDomain
+            newItem: HospitalDomain,
         ): Boolean {
             return oldItem.name == newItem.name
         }
 
         override fun areContentsTheSame(
             oldItem: HospitalDomain,
-            newItem: HospitalDomain
+            newItem: HospitalDomain,
         ): Boolean {
             return oldItem == newItem
         }
-
     }
-
 }
