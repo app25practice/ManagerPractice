@@ -65,6 +65,13 @@
     <string name="choose_date">이용일자를 선택해주세요</string>
     <string name="choose_time">매니저 만남 시간을 선택해주세요</string>
     <string name="same_day_reservation">당일 예약은 불가합니다</string>
+    <string name="select_service">이용하실 서비스 선택해주세요</string>
+    <string name="outpatient_treatment">외래진료</string>
+    <string name="select_vehicle">이동수단 선택</string>
+    <string name="walk">도보</string>
+    <string name="public_transportation">대중교통</string>
+    <string name="taxi">택시</string>
+    <string name="low_fees">추가비용: 낮음</string>
     <string-array name="relation_option">
         <item>본인</item>
         <item>자식</item>
@@ -96,6 +103,11 @@
         <item>064</item>
     </string-array>
 
+    <string-array name="select_service">
+        <item>정기검진</item>
+        <item>하루동행</item>
+        <item>기타동행</item>
+    </string-array>
     <string name="reservation_history">예약 내역</string>
     <string name="reservation_cancel">예약 취소</string>
     <string name="call_manager">매니저에게 연락하기</string>
