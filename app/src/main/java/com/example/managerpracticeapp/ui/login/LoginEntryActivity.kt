@@ -1,10 +1,7 @@
 package com.example.managerpracticeapp.ui.login
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.managerpracticeapp.R
 
 class LoginEntryActivity : AppCompatActivity() {

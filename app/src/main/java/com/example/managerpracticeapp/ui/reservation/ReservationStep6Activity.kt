@@ -10,7 +10,7 @@ import com.example.managerpracticeapp.ui.reservation.adapters.HospitalRecyclerVi
 import com.example.managerpracticeapp.ui.reservation.interfaces.OnHospitalClickListener
 
 class ReservationStep6Activity : AppCompatActivity() {
-    lateinit var binding:ActivityReservationStep6Binding
+    lateinit var binding: ActivityReservationStep6Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,6 @@ class ReservationStep6Activity : AppCompatActivity() {
                     val intent = Intent(this@ReservationStep6Activity, ReservationStep7Activity::class.java)
                     startActivity(intent)
                 }
-
             }
 
         val adapter = HospitalRecyclerViewAdapter(hospitalClickListener)
@@ -42,7 +41,6 @@ class ReservationStep6Activity : AppCompatActivity() {
         binding.hospitalRecyclerView.layoutManager = LinearLayoutManager(this)
 
         adapter.submitList(hospitals)
-
     }
 
     private fun navigateToPrevious() {

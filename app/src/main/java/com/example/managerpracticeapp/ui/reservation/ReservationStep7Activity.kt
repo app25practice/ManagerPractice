@@ -1,5 +1,6 @@
 package com.example.managerpracticeapp.ui.reservation
 
+import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import android.widget.NumberPicker
@@ -26,6 +27,7 @@ class ReservationStep7Activity : AppCompatActivity() {
         setDatePicker()
         setTimePicker()
         navigateToPrevious()
+        navigateToNext()
     }
 
     private fun getCurrentTime() {
@@ -43,34 +45,38 @@ class ReservationStep7Activity : AppCompatActivity() {
 
     private fun setDatePicker() {
         // 내일 날짜를 계산합니다.
-        val tomorrow = Calendar.getInstance().apply {
-            add(Calendar.DAY_OF_MONTH, 1)
-        }
+        val tomorrow =
+            Calendar.getInstance().apply {
+                add(Calendar.DAY_OF_MONTH, 1)
+            }
 
         val year = tomorrow.get(Calendar.YEAR)
         val month = tomorrow.get(Calendar.MONTH)
         val day = tomorrow.get(Calendar.DAY_OF_MONTH)
 
         binding.datePicker.minDate = tomorrow.timeInMillis
-        val oneMonthLater = Calendar.getInstance().apply {
-            add(Calendar.MONTH, 1)
-        }
+        val oneMonthLater =
+            Calendar.getInstance().apply {
+                add(Calendar.MONTH, 1)
+            }
         binding.datePicker.maxDate = oneMonthLater.timeInMillis
 
         binding.datePicker.init(
-            year, month, day
+            year,
+            month,
+            day,
         ) { _, selectedYear, selectedMonth, selectedDay ->
             this.selectedYear = selectedYear
             this.selectedMonth = selectedMonth
             this.selectedDay = selectedDay
 
             Toast.makeText(
-                this, "Selected Date: $selectedYear/${selectedMonth + 1}/$selectedDay",
-                Toast.LENGTH_SHORT
+                this,
+                "Selected Date: $selectedYear/${selectedMonth + 1}/$selectedDay",
+                Toast.LENGTH_SHORT,
             ).show()
         }
     }
-
 
     private fun setTimePicker() {
         val minutePickerId = Resources.getSystem().getIdentifier("minute", "id", "android")
@@ -95,6 +101,13 @@ class ReservationStep7Activity : AppCompatActivity() {
 
         binding.previousBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
+        }
+    }
+
+    private fun navigateToNext() {
+        binding.nextBtn.setOnClickListener {
+            val intent = Intent(this, ReservationStep8Activity::class.java)
+            startActivity(intent)
         }
     }
 }

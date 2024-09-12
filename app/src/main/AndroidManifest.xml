@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".ui.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,6 +15,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ManagerPracticeApp"
         tools:targetApi="31">
+
+        <activity
+            android:name=".ui.status.ReservationCheckReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.status.ReservationCancelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.status.ReservationStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.companion.LiveCompanionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationCheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationStep9Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reservation.ReservationStep8Activity"
+            android:exported="false" />
         <activity
             android:name=".ui.reservation.ReservationSelectVehicle"
             android:exported="false" />
@@ -39,6 +67,7 @@
         <activity
             android:name=".ui.reservation.ReservationStep1Activity"
             android:exported="false" />
+
         <activity
             android:name=".ui.login.LoginEntryActivity"
             android:exported="false" />
