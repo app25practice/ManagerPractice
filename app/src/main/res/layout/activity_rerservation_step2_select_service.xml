@@ -33,7 +33,6 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:layout_weight="6"
         app:boxBackgroundColor="@color/white"
         app:boxStrokeColor="@color/blue"
         android:layout_marginTop="30dp"
