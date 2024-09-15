@@ -55,7 +55,7 @@ class ReservationStep5Activity : AppCompatActivity() {
 
         @JavascriptInterface
         fun processAddress(address: String) {
-
+            // 선택한 주소를 EditText에 표시
             selectedAddress = address
             runOnUiThread {
                 binding.roadAddressEditText.setText(address)
